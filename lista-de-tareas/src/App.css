@@ -1,0 +1,85 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #E5EDF2; /* Fondo azul claro pastel */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #2C3A47; /* Color oscuro para el título */
+  margin-bottom: 25px;
+}
+
+.task-container {
+  width: 70%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #FAFAFA; /* Fondo ligeramente gris */
+  padding: 30px;
+  overflow: hidden;
+}
+
+.task-input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #B2BABB; /* Borde ligeramente gris */
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.task-input:focus {
+  border-color: #2C3A47; /* Color oscuro para el borde al enfocar */
+}
+
+.add-button, .finish-all-button, .remove-all-button {
+  padding: 10px 20px;
+  background-color: #3498DB; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.add-button:hover, .finish-all-button:hover, .remove-all-button:hover {
+  background-color: #2471A3; /* Azul oscuro al pasar el ratón */
+}
+
+.tasks-list {
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: #F2F3F4; /* Fondo ligeramente gris */
+  transition: background-color 0.3s ease;
+}
+
+.task:hover {
+  background-color: #D5D8DC; /* Gris más oscuro al pasar el ratón */
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: #B2BABB; /* Gris al pasar el ratón */
+}
