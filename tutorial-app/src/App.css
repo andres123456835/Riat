@@ -1,0 +1,23 @@
+.App {
+  width: 300px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #eee;
+  padding: 20px;
+  box-shadow: 0px 0px 5px #aaa;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+h3 {
+  margin: 0;
+}
