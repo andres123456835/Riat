@@ -1,5 +1,6 @@
 import React from 'react';
 import './Note.css';
+
 function Note({ id, title, content, onDelete }) {
   return (
     <div className="Note">

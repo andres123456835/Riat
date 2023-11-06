@@ -1,16 +1,23 @@
 import React from 'react';
 import NoteList from './componentes/NoteList.js';
 import NoteEditor from './componentes/NoteEditor.js';
+import NoteBuscador from './componentes/NoteBuscador.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import  './componentes/Note.css';
 
 
 function App() {
+
+  const oncreate = () => {
+    window.location.reload();
+  };
+
+
   return (
-    <div className="App">
-      <h2>Aplicación de Notas</h2>
-      <input type="text" placeholder="Buscador" />
-      <h3>Insertar Nota</h3>
-      <NoteEditor />
+    <div className="App" >
+      
+      <NoteBuscador onCreate={oncreate}/>
+      <NoteEditor onCreate={oncreate}/>
       <NoteList />
     </div>
   );

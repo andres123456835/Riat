@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-function NoteEditor() {
+function NoteEditor(  { onCreate }) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const inputRef = useRef(null);
@@ -20,6 +20,8 @@ function NoteEditor() {
     setTitle('');
     setContent('');
     inputRef.current.focus();
+
+    onCreate();
   };
 
   return (
