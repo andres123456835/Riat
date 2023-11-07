@@ -10,4 +10,15 @@
   .micss{
     background-color: red;
   }
+
+  .titulo{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+  }
   
+  .buscador{
+    width: 100%;
+    background-color: rebeccapurple;
+    
+  }

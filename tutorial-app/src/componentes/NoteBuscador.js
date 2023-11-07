@@ -20,7 +20,10 @@ function NoteBusador( { onCreate }) {
 
   return (
         <div>
+          <div className='row' class='titulo'>
             <h2>Aplicación de Notas</h2>
+          </div>
+            
             <input type="text" placeholder="Buscador" 
                 onChange={(e) => cambioTexto(e.target.value)} />
             <h3>Insertar Nota</h3>
