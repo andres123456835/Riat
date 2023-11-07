@@ -9,7 +9,7 @@ function NoteBusador( { onCreate }) {
   }, []);
 
   const cambioTexto = (texto) => {
-    if(texto.length>=4){
+    if(texto.length>=1){
         const updatedNotes = notes.filter(note => note.title == texto);
         setNotes(updatedNotes);
         localStorage.setItem("notes", JSON.stringify(updatedNotes));
@@ -23,10 +23,13 @@ function NoteBusador( { onCreate }) {
           <div className='row' class='titulo'>
             <h2>Aplicación de Notas</h2>
           </div>
+          <div>
+            <input className='row'class="buscador" type="text" placeholder="Buscador" onChange={(e) => cambioTexto(e.target.value)} />
+            <div className='row' class='titulo'>
+              <h3>Insertar Nota</h3>
+            </div>  
+          </div>
             
-            <input type="text" placeholder="Buscador" 
-                onChange={(e) => cambioTexto(e.target.value)} />
-            <h3>Insertar Nota</h3>
         </div>
   );
 }

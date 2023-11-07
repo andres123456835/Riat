@@ -1,6 +1,7 @@
 .Note {
     margin-top: 10px;
     border-top: 1px solid #eee;
+    text-align: center;
   }
   
   .Note h4 {
@@ -19,6 +20,15 @@
   
   .buscador{
     width: 100%;
-    background-color: rebeccapurple;
+    border-radius: 10%;
+    border-color: blue;
     
   }
+  .guardar{
+    color: rgba(17, 6, 6, 0.215);
+    background-color: #afe2fb;
+    text-align: center;
+
+    margin-right: 25%;
+    
+    }

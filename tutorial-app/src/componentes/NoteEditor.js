@@ -26,19 +26,26 @@ function NoteEditor(  { onCreate }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        ref={inputRef}
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Título de la nota"
-      />
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder="Contenido de la nota"
-      />
-      <button type="submit">Guardar Nota</button>
+      <div className='row' class="titulo">
+        <input
+          ref={inputRef}
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Título de la nota"
+        />
+      </div>
+      <div className='row' class="titulo">
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Contenido de la nota"
+        />
+      </div>
+      <div className='row'>
+        <button  class="guardar" type="submit">Guardar Nota</button>
+      </div>
+      
     </form>
   );
 }
