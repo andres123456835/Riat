@@ -19,16 +19,15 @@
   }
   
   .buscador{
-    width: 100%;
+    text-align: center;
+    margin-left: 40%;
+    width: 20%;
     border-radius: 10%;
     border-color: blue;
     
   }
   .guardar{
     color: rgba(17, 6, 6, 0.215);
-    background-color: #afe2fb;
     text-align: center;
-
-    margin-right: 25%;
-    
+    margin-left: 40%;
     }

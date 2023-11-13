@@ -43,7 +43,7 @@ function NoteEditor(  { onCreate }) {
         />
       </div>
       <div className='row'>
-        <button  class="guardar" type="submit">Guardar Nota</button>
+        <button  class="" type="submit">Guardar Nota</button>
       </div>
       
     </form>
