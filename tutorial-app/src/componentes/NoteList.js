@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Note from './Note';
 
-function NoteList() {
-  const [notes, setNotes] = useState([]);
-
-  useEffect(() => {
+function NoteList({onload}) {
+  //console.log(onload);
+  const noteslist = onload;
+  
+  /*useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
     setNotes(savedNotes);
-  }, []);
+  }, []);*/
 
   const deleteNote = (id) => {
-    const updatedNotes = notes.filter(note => note.id !== id);
-    setNotes(updatedNotes);
-    localStorage.setItem("notes", JSON.stringify(updatedNotes));
+    //const updatedNotes = noteslist.filter(note => noteslist.id !== id);
+    //setNotesList(updatedNotes);
+    //localStorage.setItem("notes", JSON.stringify(updatedNotes));
   };
 
   return (
     <div>
-      {notes.map(note => (
+      {noteslist.map(note => (
         <Note key={note.id} id={note.id} title={note.title} content={note.content} onDelete={deleteNote} />
       ))}
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function NoteBusador( { onCreate }) {
+function NoteBusador( { onChange }) {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
@@ -9,14 +9,23 @@ function NoteBusador( { onCreate }) {
   }, []);
 
   const cambioTexto = (texto) => {
-    if(texto.length>=1){
-        const updatedNotes = notes.filter(note => note.title == texto);
-        setNotes(updatedNotes);
-        localStorage.setItem("notes", JSON.stringify(updatedNotes));
-        onCreate();
+    //console.log("hola"+texto)
+    //if(texto.length>=1){
+        const updatedNotes = notes.filter(note => note.title.startsWith(texto));
+        if(updatedNotes==0){
+          const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+          setNotes(savedNotes);
+        }else{
+          setNotes(updatedNotes);
+        }
+        //localStorage.setItem("notes", JSON.stringify(updatedNotes));
+        //onCreate();
+        //console.log(updatedNotes);
+        onChange(updatedNotes);
+        
     }
     
-  };
+
 
   return (
         <div>
