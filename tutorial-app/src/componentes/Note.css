@@ -31,3 +31,64 @@
     text-align: center;
     margin-left: 40%;
     }
+
+    /* Estilo general de las notas */
+.note {
+  position: relative;
+  width: 250px;
+  padding: 15px;
+  background-color: #FFF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del encabezado de las notas */
+.note .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del título de las notas */
+.note .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilo del contenido de las notas */
+.note .content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Estilo del pie de página de las notas */
+.note .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Estilo de las fechas de las notas */
+.note .date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Estilo de los botones de las notas */
+.note .btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.note .btn:hover {
+  background-color: #DDD;
+}
