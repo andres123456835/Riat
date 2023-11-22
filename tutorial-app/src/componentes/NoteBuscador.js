@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from 'react';
 
-function NoteBusador( { onChange }) {
-  const [notes, setNotes] = useState([]);
+function NoteBusador( { onChange,mynotes }) {
+  //const [notes, setNotes] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
     setNotes(savedNotes);
-  }, []);
+  }, []);*/
 
   const cambioTexto = (texto) => {
     //console.log("hola"+texto)
     //if(texto.length>=1){
-        const updatedNotes = notes.filter(note => note.title.startsWith(texto));
+      /*  const updatedNotes = mynotes.filter(note => note.title.startsWith(texto));  //hacer lo con usestate 
         if(updatedNotes==0){
           const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-          setNotes(savedNotes);
+          //setNotes(savedNotes);
+          mynotes = savedNotes
         }else{
-          setNotes(updatedNotes);
-        }
+          //setNotes(updatedNotes);
+          mynotes = updatedNotes
+        }*/
         //localStorage.setItem("notes", JSON.stringify(updatedNotes));
         //onCreate();
         //console.log(updatedNotes);
-        onChange(updatedNotes);
+        onChange(texto);
+
         
     }
     

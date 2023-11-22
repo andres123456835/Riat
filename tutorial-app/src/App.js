@@ -9,6 +9,7 @@ import  './componentes/Note.css';
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const [updatedNotes, setupdatedNotes] = useState([]);
 
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
@@ -19,23 +20,30 @@ function App() {
     window.location.reload();
   };
 
-  const onchange = (listanotes) => {
-    console.log(listanotes);
-    //console.log(listanotes.length);
-    
-    if(listanotes.length==0){
-      const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-      setNotes(savedNotes);
+
+
+  const onchange = (texto) => {
+    const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+    setNotes(savedNotes);
+
+    const update = notes.filter(note => note.title.startsWith(texto));
+
+    if(update==0){
+      //const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+      //setNotes(savedNotes);
     }else{
-      setNotes(listanotes);
-    }   
+      setNotes(update);
+      console.log(update);
+      console.log(notes);
+    }
+    
     
   };
 
   return (
     <div className="App" >
       
-      <NoteBuscador onChange={onchange}/>
+      <NoteBuscador onChange={onchange} mynotes={notes}/>
       <NoteEditor onCreate={oncreate}/>
       <NoteList onload={notes}/>
     </div>
